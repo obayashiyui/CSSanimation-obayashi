@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+  <meta charset="UTF-8">
+  <title>CSSアニメーション</title>
+	<style>
+		
+		
+		#headline{
+  color: red;
+			}
+		
+		.main {
+  color: green;
+			}
+		
+		p{
+  color: red;
+}
+		a {color: green}
+		
+		
+		
+		.sample p {
+    color: red;
+    font-size: 18px;
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+}
+ 
+.sample2 p {
+    color: blue;
+    font-size: 18px;
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+}
+ 
+.sample3 p {
+    color: green;
+    font-size: 18px;
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+     
+}
+ 
+.sample4 p {
+    color: red;
+    font-size: 18px;
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
+     
+}
+		
+#ari1 {
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+     
+}
+ 
+#ari2 {
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+     
+}
+		
+#ari3 {
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+			
+	}	
+		
+#ari4 {
+    padding: 100px 0 0 900px;
+    animation-name:keiziban;
+    animation-timing-function:linear;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+     
+}
+		
+@keyframes keiziban {
+  from   { transform: translateX(0%);} 
+  100% { transform: translateX(-100%);}
+}
+
+		
+#kumo1 {
+  animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+  animation-iteration-count:infinite;
+  animation-duration: 3s;
+}
+ 
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+		}
+	
+#purin1 {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+  animation-iteration-count:infinite;		
+}
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+		
+#POP1{
+  
+  width: 300px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+ 
+#POP1{
+  width: 50%;
+  transition-duration: 0.3s;
+}
+#POP1:hover {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+		
+		
+#POP2{
+  width: 40%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+#POP2:hover {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+				
+	</style>
+	
+</head>
+	
+	<body style="background: pink; text-align: center;">
+
+<body>
+	
+	
+  <div id="headline">
+  <h1>CSSアニメーション</h1>
+	   <img src="line.png" alt="ライン" title="ライン">
+ <h2>スライドのアニメーション例です</h2>
+  </div>
+	
+	<div class="sample">
+    <p>ノーマル　右から左</p>
+</div>
+<div class="sample2">
+    <p>リバース　逆</p>
+</div>
+<div class="sample3">
+    <p>alternate ノーマルから逆の繰り返し</p>
+</div>
+<div class="sample4">
+    <p>alternate-reverse　逆からノーマルの繰り返し</p>
+</div>
+		
+	
+ <img src="line.png" alt="ライン" title="ライン">
+	
+  <div class="main">
+  <h2>これをイラストに置き換えます</h2>
+  
+	  
+	
+    
+	<figure><img src="image1.png" alt="ありの画像" title="ノーマル　右から左" id="ari1"><figcaption>↑ノーマル　右から左</figcaption></figure>
+	  
+	  
+    <figure><img src="image2.png" alt="ありの画像" title="ありの画像右" id="ari2"><figcaption>↑リバース　逆</figcaption></figure>
+	  
+
+	  <figure><img src="image1.png" alt="ありの画像" title="ノーマル　右から左" id="ari3"><figcaption>↑ノーマルから逆の繰り返し</figcaption></figure>
+	  
+	  
+    <figure><img src="image2.png" alt="ありの画像" title="ありの画像右" id="ari4"><figcaption>↑逆からノーマルの繰り返し</figcaption></figure>
+	  
+	  <br> <p>イラストの向きと動きが合わないと変ですね</p><br>
+	  
+	  
+ 
+<img src="line.png" alt="ライン" title="ライン">
+	  
+	  
+	  
+	  <div class="main">
+  <h2>次に他のアメーションを画像に適用してみます</h2>
+	  
+	   <figure><img src="kumo.png" alt="雲の画像" title="雲の画像" id="kumo1"><figcaption>↑POP UP</figcaption></figure>
+	  
+		  
+		   <figure><img src="purin.png" alt="プリンの画像" title="プリンの画像" id="purin1"><figcaption>↑ぷるぷる揺れる</figcaption></figure>
+	  
+		  
+		  
+<img src="line.png" alt="ライン" title="ライン">
+		  
+	 
+		  <div class="main">
+  <h2>次にマウスホバーを適用してみます</h2>
+			  
+			  
+		  <figure><img src="push.png" alt="ボタンの画像" title="ボタンの画像" id="POP1"><figcaption>↑マウスホバー　拡大</figcaption></figure>
+	  
+		  
+		   <figure><img src="hum.png" alt="ボタンの画像" title="ハムの画像" id="POP2"><figcaption>↑マウスホバー　回転</figcaption></figure>
+</body>
+		  
+</html>
